@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Future Perfect & Future Perfect Continuous</title>
+<style>
+:root{
+  --lav:#7b6aa8;
+  --lav-dark:#574779;
+  --lav-light:#eee9f8;
+  --peach:#f5b99f;
+  --peach-light:#fff0e8;
+  --cream:#fffaf7;
+  --ink:#302b3a;
+  --muted:#6f6878;
+  --green:#3f7d63;
+  --red:#a64f5c;
+  --white:#fff;
+  --shadow:0 12px 30px rgba(75,57,99,.10);
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Inter, "Segoe UI", Arial, sans-serif;
+  color:var(--ink);
+  background:
+    radial-gradient(circle at 5% 5%, #f1e8ff 0, transparent 28%),
+    radial-gradient(circle at 95% 18%, #ffe5d7 0, transparent 30%),
+    var(--cream);
+  font-size:18px;
+  line-height:1.65;
+}
+.container{max-width:1050px;margin:auto;padding:28px 18px 70px}
+.hero{
+  background:linear-gradient(135deg,#eee8fb,#ffe7dc);
+  border:1px solid rgba(123,106,168,.16);
+  border-radius:30px;
+  padding:42px 34px;
+  box-shadow:var(--shadow);
+  margin-bottom:28px;
+}
+h1{
+  margin:0;
+  color:var(--lav-dark);
+  font-size:clamp(30px,5vw,50px);
+  line-height:1.15;
+  letter-spacing:-1px;
+}
+.card{
+  background:rgba(255,255,255,.92);
+  border-radius:24px;
+  padding:30px;
+  margin:22px 0;
+  box-shadow:var(--shadow);
+  border:1px solid #eee7f2;
+}
+h2{
+  color:var(--lav-dark);
+  font-size:clamp(25px,3.5vw,34px);
+  margin:0 0 18px;
+}
+h3{color:#6a588d;font-size:22px;margin:24px 0 10px}
+.formula{
+  font-size:clamp(22px,3vw,29px);
+  font-weight:800;
+  text-align:center;
+  padding:18px;
+  border-radius:18px;
+  background:linear-gradient(90deg,var(--lav-light),var(--peach-light));
+  color:var(--lav-dark);
+  margin:18px 0 24px;
+}
+.example{
+  border-left:5px solid var(--peach);
+  background:#fff9f5;
+  padding:14px 18px;
+  margin:12px 0;
+  border-radius:0 15px 15px 0;
+}
+.en{font-weight:700;font-size:19px}
+.ru{color:var(--muted);margin-top:3px}
+.chips{display:flex;flex-wrap:wrap;gap:9px;margin:14px 0}
+.chip{
+  background:var(--lav-light);
+  color:var(--lav-dark);
+  border-radius:999px;
+  padding:7px 13px;
+  font-weight:700;
+}
+.compare{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+}
+.compare-box{
+  padding:22px;
+  border-radius:20px;
+  background:#faf7ff;
+  border:1px solid #e9e0f4;
+}
+.compare-box:nth-child(2){background:#fff7f2;border-color:#f7ded2}
+.big-question{
+  text-align:center;
+  margin-top:20px;
+  background:linear-gradient(90deg,#f0ebfa,#fff0e7);
+  border-radius:20px;
+  padding:20px;
+  font-size:20px;
+}
+.exercise{
+  padding:21px 0;
+  border-bottom:1px solid #eee8ef;
+}
+.exercise:last-child{border-bottom:none}
+.sentence{font-size:19px;margin-bottom:12px}
+.answer-row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+input{
+  flex:1 1 330px;
+  min-width:0;
+  padding:14px 16px;
+  border:2px solid #ddd3e8;
+  border-radius:13px;
+  font-size:17px;
+  color:var(--ink);
+  background:#fff;
+  outline:none;
+}
+input:focus{border-color:var(--lav)}
+button{
+  border:0;
+  border-radius:13px;
+  padding:13px 18px;
+  font-size:16px;
+  font-weight:800;
+  cursor:pointer;
+  background:var(--lav);
+  color:#fff;
+  transition:.18s ease;
+}
+button:hover{transform:translateY(-1px);background:var(--lav-dark)}
+.feedback{margin-top:8px;font-weight:700;min-height:26px}
+.correct{color:var(--green)}
+.wrong{color:var(--red)}
+.actions{
+  display:flex;gap:12px;flex-wrap:wrap;margin-top:25px;
+}
+.actions button{padding:15px 22px}
+.secondary{background:#d99275}
+.score{
+  margin-top:18px;
+  font-size:21px;
+  font-weight:800;
+  color:var(--lav-dark);
+}
+.note{color:var(--muted)}
+@media(max-width:700px){
+  body{font-size:17px}
+  .container{padding:16px 12px 45px}
+  .hero,.card{padding:23px 18px;border-radius:21px}
+  .compare{grid-template-columns:1fr}
+  .sentence{font-size:18px}
+  .answer-row{align-items:stretch}
+  input{flex-basis:100%;width:100%}
+  .answer-row button{width:100%}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<section class="hero">
+  <h1>Future Perfect &amp; Future Perfect Continuous</h1>
+</section>
+
+<section class="card">
+  <h2>Future Perfect</h2>
+  <p><strong>Future Perfect</strong> показывает, что действие <strong>будет завершено к определённому моменту в будущем</strong>.</p>
+
+  <div class="formula">will have + V3</div>
+
+  <h3>Когда используем?</h3>
+  <p>Когда важно показать <strong>результат</strong>, который будет готов к определённому моменту.</p>
+
+  <div class="chips">
+    <span class="chip">by — к</span>
+    <span class="chip">by the time — к тому времени как</span>
+    <span class="chip">before — до</span>
+    <span class="chip">by tomorrow</span>
+    <span class="chip">by next week</span>
+    <span class="chip">by 2030</span>
+  </div>
+
+  <div class="example">
+    <div class="en">By 6 p.m., I will have finished the report.</div>
+    <div class="ru">К шести вечера я закончу отчёт.</div>
+  </div>
+  <div class="example">
+    <div class="en">By the time you arrive, we will have cooked dinner.</div>
+    <div class="ru">К тому времени, как ты приедешь, мы уже приготовим ужин.</div>
+  </div>
+  <div class="example">
+    <div class="en">She will have graduated from university by next summer.</div>
+    <div class="ru">К следующему лету она окончит университет.</div>
+  </div>
+  <div class="example">
+    <div class="en">Will you have finished the project by Friday?</div>
+    <div class="ru">Ты закончишь проект к пятнице?</div>
+  </div>
+  <div class="example">
+    <div class="en">I won’t have saved enough money by then.</div>
+    <div class="ru">К тому времени я не накоплю достаточно денег.</div>
+  </div>
+</section>
+
+<section class="card">
+  <h2>Future Perfect Continuous</h2>
+  <p><strong>Future Perfect Continuous</strong> показывает, <strong>как долго действие будет продолжаться к определённому моменту в будущем</strong>.</p>
+
+  <div class="formula">will have been + V-ing</div>
+
+  <h3>Когда используем?</h3>
+  <p>Когда действие началось раньше и будет продолжаться до определённого момента в будущем. Главное здесь — <strong>продолжительность процесса</strong>.</p>
+
+  <div class="chips">
+    <span class="chip">for two hours</span>
+    <span class="chip">for five years</span>
+    <span class="chip">since Monday</span>
+    <span class="chip">by then</span>
+    <span class="chip">by the end of...</span>
+  </div>
+
+  <div class="example">
+    <div class="en">By 5 p.m., I will have been working for eight hours.</div>
+    <div class="ru">К пяти вечера я буду работать уже восемь часов.</div>
+  </div>
+  <div class="example">
+    <div class="en">Next month, she will have been living here for ten years.</div>
+    <div class="ru">В следующем месяце будет уже десять лет, как она здесь живёт.</div>
+  </div>
+  <div class="example">
+    <div class="en">By the time we arrive, they will have been waiting for two hours.</div>
+    <div class="ru">К тому времени, как мы приедем, они будут ждать уже два часа.</div>
+  </div>
+  <div class="example">
+    <div class="en">How long will you have been studying English by the end of this year?</div>
+    <div class="ru">Сколько времени ты будешь изучать английский к концу этого года?</div>
+  </div>
+</section>
+
+<section class="card">
+  <h2>Future Perfect или Future Perfect Continuous?</h2>
+
+  <div class="compare">
+    <div class="compare-box">
+      <h3>Future Perfect</h3>
+      <p><strong>Результат к моменту в будущем</strong></p>
+      <div class="example">
+        <div class="en">By 8 p.m., I will have written five emails.</div>
+        <div class="ru">К восьми вечера я напишу пять писем.</div>
+      </div>
+      <p>Важно: <strong>пять писем будут готовы.</strong></p>
+    </div>
+
+    <div class="compare-box">
+      <h3>Future Perfect Continuous</h3>
+      <p><strong>Продолжительность процесса</strong></p>
+      <div class="example">
+        <div class="en">By 8 p.m., I will have been writing emails for three hours.</div>
+        <div class="ru">К восьми вечера я буду писать письма уже три часа.</div>
+      </div>
+      <p>Важно: <strong>процесс длится три часа.</strong></p>
+    </div>
+  </div>
+
+  <div class="big-question">
+    <strong>Результат?</strong> → Future Perfect<br>
+    <strong>Как долго длится процесс?</strong> → Future Perfect Continuous
+  </div>
+</section>
+
+<section class="card">
+  <h2>Practice</h2>
+  <p class="note">Поставьте глагол в Future Perfect или Future Perfect Continuous.</p>
+  <div id="tasks"></div>
+
+  <div class="actions">
+    <button onclick="checkAll()">Проверить всё</button>
+    <button class="secondary" onclick="resetAll()">Начать заново</button>
+  </div>
+  <div class="score" id="score"></div>
+</section>
+
+</div>
+
+<script>
+const data = [
+ ["By Friday, I __________ the report.", "finish", "will have finished"],
+ ["By the end of this month, she __________ at the company for ten years.", "work", "will have been working"],
+ ["By the time you get home, I __________ dinner.", "cook", "will have cooked"],
+ ["Next September, we __________ in this house for five years.", "live", "will have been living"],
+ ["By 10 p.m., he __________ all his emails.", "answer", "will have answered"],
+ ["By the time the doctor sees her, she __________ for more than an hour.", "wait", "will have been waiting"],
+ ["By next summer, they __________ enough money to buy a car.", "save", "will have saved"],
+ ["At noon, I __________ for six hours without a break.", "study", "will have been studying"],
+ ["By the end of the week, we __________ all the necessary documents.", "prepare", "will have prepared"],
+ ["By 2030, scientists __________ this problem for several decades.", "study", "will have been studying"],
+ ["By the time the guests arrive, Sarah __________ the house.", "clean", "will have cleaned"],
+ ["In December, he __________ English for exactly three years.", "learn", "will have been learning"],
+ ["By tomorrow morning, the snow __________ most of the roads.", "cover", "will have covered"],
+ ["By 7 p.m., they __________ for nearly five hours.", "drive", "will have been driving"],
+ ["By the end of the course, you __________ more than twenty essays.", "write", "will have written"],
+ ["By next Monday, our team __________ on this project for six months.", "work", "will have been working"],
+ ["By the time we reach the airport, the plane __________.", "leave", "will have left"],
+ ["At the end of this year, my parents __________ in France for twenty years.", "live", "will have been living"],
+ ["By the time you read this message, I __________ the decision.", "make", "will have made"],
+ ["By midnight, she __________ for twelve hours, so she will definitely need some rest.", "travel", "will have been travelling"]
+];
+
+const tasks = document.getElementById("tasks");
+
+data.forEach((item,i)=>{
+  const box=document.createElement("div");
+  box.className="exercise";
+  box.innerHTML=`
+    <div class="sentence"><strong>${i+1}.</strong> ${item[0]} <span class="note">(${item[1]})</span></div>
+    <div class="answer-row">
+      <input id="a${i}" autocomplete="off" placeholder="Введите форму глагола">
+      <button onclick="checkOne(${i})">Проверить</button>
+    </div>
+    <div class="feedback" id="f${i}"></div>`;
+  tasks.appendChild(box);
+});
+
+function norm(s){
+  return s.trim().toLowerCase().replace(/[’']/g,"'").replace(/\s+/g," ");
+}
+
+function checkOne(i){
+  const input=document.getElementById("a"+i);
+  const feedback=document.getElementById("f"+i);
+  const ok=norm(input.value)===norm(data[i][2]);
+  if(ok){
+    feedback.textContent="Верно!";
+    feedback.className="feedback correct";
+    input.style.borderColor="#72a58d";
+  } else {
+    feedback.textContent="Правильный ответ: " + data[i][2];
+    feedback.className="feedback wrong";
+    input.style.borderColor="#c9828c";
+  }
+  return ok;
+}
+
+function checkAll(){
+  let correct=0;
+  data.forEach((_,i)=>{ if(checkOne(i)) correct++; });
+  document.getElementById("score").textContent=`Результат: ${correct} / ${data.length}`;
+}
+
+function resetAll(){
+  data.forEach((_,i)=>{
+    const input=document.getElementById("a"+i);
+    input.value="";
+    input.style.borderColor="#ddd3e8";
+    const f=document.getElementById("f"+i);
+    f.textContent="";
+    f.className="feedback";
+  });
+  document.getElementById("score").textContent="";
+  window.scrollTo({top:0,behavior:"smooth"});
+}
+</script>
+</body>
+</html>
